@@ -104,7 +104,7 @@
 
     </div>
    
-   <form role="form" id="myForm" method="post" enctype="multipart/form-data" action="{% url 'web' %}"> {% csrf_token %}
+   <form  id="myForm" method="post" enctype="multipart/form-data" action="{% url 'web' %}"> {% csrf_token %}
 {% comment %} 
     <div id="Login" class="overlay">
       <div class="popup">
@@ -415,7 +415,7 @@
 
     <!-- ใส่รูป -->
     <div id="popup8" class="overlay">
-      <div class="popup">
+      <div class="popup" style="top: 10%;">
         <img class="icon2" src="{% static 'img/fire_icon2.png'%}" style="height:5%; width: 10%;" /><br>
         <h2 style="color: black;">Upload Your Profile</h2>
         <a class="close" href="#">&times;</a>
@@ -429,8 +429,8 @@
                       </div>
         </div>
                      <br> <br>
-                    <button type="submit" style="border-radius: 30px; background:black; color:white; height:50%; width:30%;">ยืนยัน</button>
-                <br> <br>
+                    <button type="submit" style="border-radius: 30px; background:black; color:white; height:60%; width:30%;">ยืนยัน</button>
+               <br> 
       </div>
     </div>
    
