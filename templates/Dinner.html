@@ -46,14 +46,13 @@
     <div id="top"><img class="icon_menu2" src="{% static 'img/fire_icon2.png'%}" /></div>
     <h1>Dinner</h1>
 
-    <button style="height: 10%;
+    <button class="buttop"
+    style="height: 10%;
     background: none;
     border: none;
     z-index: 10;
-    right: 10%;
-    margin-left: auto;
-    margin-right: auto;
-    position: absolute;" class="bb">
+    position: absolute;
+    " class="bb">
       <a href="#Login" style="
         text-decoration: none;
         color: #fff;
@@ -71,30 +70,27 @@
 
   </div>
   <div id="detail">
-    <div class="in_detail"><h1>ข้อมูลต่างๆ ใส่ตรงนี้</h1></div>
+    <div class="in_detail"><h1>ขอบคุณทุกคนที่เข้ามารับชมเว็บไซต์ของเรา</h1></div>
   </div>
  
-  <h1 style="z-index: 1;
+  <h1 class="te" style="z-index: 1;
       text-align: center;
        display: block;
        position: absolute;
-       margin-left: 30%;
-       margin-right: 30%;
+       left: 0;
+      right: 0;
        color: #fff;
        font-size: 15vh;
-       top: 20%;
+       
       
        "> Swipe Right </h1>
 
-  <div style="width:10%;height: 10%;
+  <div id="but" style="width:10%;height: 10%;
       background: none;
       border: none;
-      z-index: 10;
       display: block;
       position: absolute;
-      margin-left: 45%;
-       margin-right: 45%;
-      top: 60%;" class="bb">
+      " class="bb">
      
 
     <div class="ctn">
@@ -109,7 +105,9 @@
 
 
 
-  <form  id="Form" method="POST" enctype="multipart/form-data" action="{% url 'my_login' %}"> {% csrf_token %}
+
+  
+  <form  id="Form" method="POST" enctype="multipart/form-data" action="{% url 'home' %}"> {% csrf_token %}
     <div id="Login" class="overlay">
       <div class="popup">
         <img class="icon2" src="{% static 'img/fire_icon2.png'%}" style="height:5%; width: 10%;" /><br>
@@ -171,7 +169,7 @@
 
     <!-- ใส่เบอร์จ้าาา -->
     <div id="popup1" class="overlay" style="overflow: auto;">
-      <div class="popup" style="top: 0%; width:50%">
+      <div class="popup" style="top: 0%;">
         <img class="icon2" src="{% static 'img/fire_icon2.png'%}" style="height:5%; width: 10%;" /><br>
         <h2>SIGHT UP</h2>
         <h4>ใส่หมายเลขโทรศัทพ์ของคุณ</h4>
@@ -277,6 +275,7 @@
         document.getElementById("menu").classList.toggle("show");
         document.getElementById("detail").classList.toggle("show");
         document.getElementById("top").classList.toggle("show");
+        document.getElementById("but").classList.toggle("show");
       }
 
       {% comment %} show upload img {% endcomment %}
