@@ -30,4 +30,4 @@ def save_data(request):
         school=school, cus_img=img)
         user.save()
 
-    return redirect("home")
+    return redirect("web")

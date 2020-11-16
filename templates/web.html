@@ -130,6 +130,7 @@
       flex: 0 0 100px;
       text-align: center;
       padding-top: 20px;
+      z-index: 1;
     }
 
     .tinder--buttons button {
@@ -277,6 +278,11 @@
   z-index: -9;
   animation: op2 1.3s ease-in-out;
 }
+
+@media only screen and (max-width: 1300px) {
+  .body_menu{width: 100%;}
+  .rtwo{visibility: hidden;}
+}
   </style>
 </head>
 
@@ -285,7 +291,7 @@
     <img class="icon" src="{% static 'img/fire_icon.png'%}" /> </div>
   <div class="ice2"> </div>
   <div class="ice"> </div>
-  <div style="background: #fff; width: 20%; height: 100%; float: left; z-index: 2; position: absolute; top: 10% ;"></div>
+  <div class='back' style="background: #fff; width: 100%; height: 100%; float: left; z-index: 1; position: absolute; top: 10% ;"></div>
     <table class="body_menu" style="background-image: linear-gradient(to right, #FF3399, #FF7F50);">
       <tr class="rone" >
         <th style="width:15%; height: 10%;">
