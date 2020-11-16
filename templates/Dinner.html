@@ -109,7 +109,67 @@
 
 
 
-      <form  id="Form" method="POST" enctype="multipart/form-data" action="{% url 'web' %}"> {% csrf_token %}
+    
+{% comment %} 
+    <div id="Login" class="overlay">
+      <div class="popup">
+        <img class="icon2" src="{% static 'img/fire_icon2.png'%}" style="height:5%; width: 10%;" /><br>
+        <h2>ใส่หมายเลขโทรศัทพ์ของคุณ</h2>
+
+        <a class="close" href="#">&times;</a>
+        <div class="content">
+
+          <form role="form" id="myForm">
+
+            <select name="prefix" id="prefix" class="form-control" style="background-color: aliceblue; float:left; height: 5%; border: none;">
+              <option value="0">66+</option>
+              <option value="1">+1</option>
+              <option value="2">+82</option>
+              <option value="3">+81</option>
+              <option value="4">+45</option>
+              <option value="5">+90</option>
+            </select>
+            <input type="tel" name="Loginnum" id="Loginnum" style="width:45%; height: 5%;  background-color: aliceblue; border: none; " required />
+
+            <br>
+            <h5 style="color: #BEBEBE;">เมื่อคุณแตะ "ต่อไป" Tinder จะส่งข้อความพร้อมรหัสยืนยันให้กับคุณ
+              อาจมีค่าบริการส่งข้อความและข้อมูล
+              ใช้หมายเลขโทรศัพท์ที่ได้รับการยืนยันแล้วเพื่อเข้าสู่ระบบ</h5>
+          </form>
+          <a class="button2" href="#Login2" style="border-radius: 30px;">ต่อไป</a>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ล็อคอินจ้าาา -->
+    <div id="Login2" class="overlay">
+      <div class="popup">
+        <img class="icon2"src="{% static 'img/fire_icon2.png'%}" style="height:5%; width: 10%;" /><br>
+        
+        <h2>ใส่อีเมล์ของคุณ</h2>
+        <h5 style="color: #BEBEBE;">อย่าขาดการเชื่อมต่อกับบัญชีของคุณยืนยันเมลตอนนี้</h5><br>
+
+        <a class="close" href="#">&times;</a>
+        <div class="content">
+
+
+          <form method="post" action="#">
+                    {% csrf_token %}
+          <input type="email" name="email" id="email" placeholder="กรอกอีเมล์" style="border-bottom: 3px solid #DCDCDC;
+          border-left: none; border-right: none; border-top: none; background-color: aliceblue;  width:70%; height: 5%; " required />
+          
+          </form>
+           <a id="submit" name="submit_btn" class="button2" href="{% url 'web' %}"  style="border-radius: 30px;">Login</a>
+           <br> <br>
+         
+        </div>
+      </div>
+    </div> {% endcomment %}
+
+
+
+      <form  id="Form" method="POST" enctype="multipart/form-data" action="{% url 'save_data' %}"> {% csrf_token %}
 
 
     <!-- ใส่เบอร์จ้าาา -->
@@ -160,7 +220,7 @@
         <h4>วันเกิดของฉันคือ</h4>
        
         <div class="content">
-        <input type="date" id="dob" style=" background-color: aliceblue; border: none; width:70%; height: 5%; color: grey;" placeholder="1972-11-12" />
+        <input type="date" id="dob" name="hbd" style=" background-color: aliceblue; border: none; width:70%; height: 5%; color: grey;" placeholder="1972-11-12" />
      
 
 
@@ -178,11 +238,11 @@
         <h4>ฉันเป็น</h4>
           <canter>
             <div class="input-group">
-              <input type="radio" name="gender" value="male" id="gender-male" />
+              <input type="radio" name="gender" value="M" id="gender-male" />
               <label for="gender-male" style="color: black; ">Male </h4></label>
               <br>
               <br>
-              <input type="radio" name="gender" value="female" id="gender-female" />
+              <input type="radio" name="gender" value="F" id="gender-female" />
               <label for="gender-female" style="color: black; ">Female</label>
             </div>
           </canter>
@@ -197,7 +257,7 @@
                   
                     <br>
                       <div class="box-img">
-                          <input type="file"  name="input-file"  id="input-file"  accept="image/*"  onchange={handleChange()} hidden/> 
+                          <input type="file"  name="myfile"  id="input-file"  accept="image/*"  onchange={handleChange()} hidden/> 
                           <label class="upload" for="input-file" role="button">  Upload Photo </label>
                           <br>
                             <div class="preview-box"></div>  
