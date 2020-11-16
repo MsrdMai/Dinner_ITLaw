@@ -84,6 +84,13 @@ height: 30%;}
 .bb2 :hover {
   background-image: linear-gradient(to right, #FF7F50, #FF3399);
 } 
+
+h6{
+  color: #000;
+}
+
+
+
 .tx{
   width: 150px;
   height: 5%;
